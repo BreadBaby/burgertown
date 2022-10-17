@@ -1,0 +1,24 @@
+// Заголовки, общие БЄМ блоки и проче...
+._active{
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        height: 1.5px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: #000000;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        height: 1.5px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #000000;
+    }
+}
