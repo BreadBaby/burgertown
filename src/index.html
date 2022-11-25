@@ -7,6 +7,311 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
+				<section data-fullscreen class="page__main main-page">
+					<div  class="main-page__container">
+						<div class="main-page__content">
+							<h1 class="main-page__label">
+								Вкуснейшие бургеры в <span>твоём городе</span>
+							</h1>
+							<div class="main-page__middleContent">
+								<ul class="main-page__list">
+									<li class="main-page__item">как в Mcdonalds, только вкуснее</li>
+									<li class="main-page__item">доставка быстрее твоей игры в доте</li>
+									<li class="main-page__item">онлайн заказ</li>
+									<li class="main-page__item">быстро и вкусно</li>
+								</ul>
+								<div class="main-page__image"><img src="@img/Burgermain.png" alt="Yammy Burger"></div>
+							</div>
+							<a href="#" class="main-page__button btn btn_big">сделать заказ</a>
+						</div>
+					</div>
+				</section>
+				<section id="menu" class="page__menu menu-page">
+					<div class="menu-page__container">
+						<h2 class="menu-page__label label">Меню</h2>
+						<div data-tabs class="menu-page__tabs tabs-menu">
+							<nav data-tabs-titles class="tabs-menu__navigation">
+								<button type="button" class="tabs-menu__title _tab-active">Бургеры</button>
+								<button type="button" class="tabs-menu__title">Закуски</button>
+								<button type="button" class="tabs-menu__title">Напитки</button>
+								<button type="button" class="tabs-menu__title">Соусы</button>
+							</nav>
+							<div data-tabs-body class="tabs-menu__content">
+								<div class="tabs-menu__body">
+									<div class="tabs-menu__grid body-grid">
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label spec-label">Special</div>
+											<div class="cell-items__image-ibg_burger-img cell-items__image-ibg_burger-img"><img src="@img/burgers/special.svg" alt="special burger"></div>
+											<div class="cell-items__compos">Котлета, сыр сливочный, огурец бочковой, бекон, чесночный соус, салат айсберг</div>
+											<div class="cell-items__price">Цена: 140 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label spec-label">John</div>
+											<div class="cell-items__image-ibg_burger-img cell-items__image-ibg_burger-img"><img src="@img/burgers/John.svg" alt="John burger"></div>
+											<div class="cell-items__compos">Котлета, сырный соус, огурец, лук, луковые кольца, салат айсберг</div>
+											<div class="cell-items__price">Цена: 110 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Three cheeses</div>
+											<div class="cell-items__image-ibg_burger-img cell-items__image-ibg_burger-img"><img src="@img/burgers/threeCheese.svg" alt="Three cheeses burger"></div>
+											<div class="cell-items__compos">Котлета, стейк, томат, бекон, сыр чеддер, соус барбекю, салат айсберг</div>
+											<div class="cell-items__price">Цена: 150 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">BBQ</div>
+											<div class="cell-items__image-ibg_burger-img cell-items__image-ibg_burger-img"><img src="@img/burgers/BBQ.svg" alt="BBQ"></div>
+											<div class="cell-items__compos">Котлета, сыр Чеддер, огурец бочковой, бекон, соус барбекю, салат айсберг, томат, лук</div>
+											<div class="cell-items__price">Цена: 130 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Cheeseburger</div>
+											<div class="cell-items__image-ibg_burger-img cell-items__image-ibg_burger-img"><img src="@img/burgers/cheeseburger.svg" alt="Cheeseburger"></div>
+											<div class="cell-items__compos">Котлета, сыр моцарелла, огурец бочковой, бекон, чесночный соус, салат айсберг</div>
+											<div class="cell-items__price">Цена: 140 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Vegan</div>
+											<div class="cell-items__image-ibg_burger-img cell-items__image-ibg_burger-img"><img src="@img/burgers/vegan.svg" alt="Vegan burger"></div>
+											<div class="cell-items__compos">сыр сливочный, огурец, авокадо, томат, руколла, паприка</div>
+											<div class="cell-items__price">Цена: 110 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Chef burger</div>
+											<div class="cell-items__image-ibg_burger-img cell-items__image-ibg_burger-img"><img src="@img/burgers/chefBurger.svg" alt="Chef burger"></div>
+											<div class="cell-items__compos">Котлета, сыр сливочный, огурец бочковый, бекон, чесночный соус, салат айсберг</div>
+											<div class="cell-items__price">Цена: 130 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Big burger</div>
+											<div class="cell-items__image-ibg_burger-img cell-items__image-ibg_burger-img"><img src="@img/burgers/bigBurger.svg" alt="Big burger"></div>
+											<div class="cell-items__compos">Котлета, сыр Чеддер, огурец бочковой, бекон, соус барбекю, салат айсберг, томат, лук</div>
+											<div class="cell-items__price">Цена: 140 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Chicken Burger</div>
+											<div class="cell-items__image-ibg_burger-img cell-items__image-ibg_burger-img"><img src="@img/burgers/Chicken.svg" alt="Chicken burger"></div>
+											<div class="cell-items__compos">Курица, сыр сливочный, огурец бочковой, бекон, чесночный соус,  салат айсберг</div>
+											<div class="cell-items__price">Цена: 150 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs-menu__body">
+									<div class="tabs-menu__grid body-grid">
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Картошка фри (S)</div>
+											<div class="cell-items__image-ibg"><img src="@img/snacks/fries.svg" alt="fries size S"></div>
+											<div class="cell-items__price">Цена: 48 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Картошка фри (L)</div>
+											<div class="cell-items__image-ibg"><img src="@img/snacks/fries.svg" alt="fries size L"></div>
+											<div class="cell-items__price">Цена: 80 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Кольца лука (S)</div>
+											<div class="cell-items__image-ibg"><img src="@img/snacks/onion.svg" alt="onion size S"></div>
+											<div class="cell-items__price">Цена: 40 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Кольца лука (L)</div>
+											<div class="cell-items__image-ibg"><img src="@img/snacks/onion.svg" alt="onion size L"></div>
+											<div class="cell-items__price">Цена: 70 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Крылышки (5 шт.)</div>
+											<div class="cell-items__image-ibg"><img src="@img/snacks/chicken.svg" alt="fried wings"></div>
+											<div class="cell-items__price">Цена: 65 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Криветки (5 шт.)</div>
+											<div class="cell-items__image-ibg"><img src="@img/snacks/shrimp.svg" alt="fried shrimp"></div>
+											<div class="cell-items__price">Цена: 90 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs-menu__body">
+									<div class="tabs-menu__grid body-grid">
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Coca-cola(0,5)</div>
+											<div class="cell-items__image-ibg"><img src="@img/drinks/cocacola.svg" alt="Coca-cola"></div>
+											<div class="cell-items__price">Цена: 20 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">7Up(0,5)</div>
+											<div class="cell-items__image-ibg"><img src="@img/drinks/7Up.svg" alt="7Up"></div>
+											<div class="cell-items__price">Цена: 25 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Сок(0,5)</div>
+											<div class="cell-items__image-ibg"><img src="@img/drinks/juice.svg" alt="Juice"></div>
+											<div class="cell-items__price">Цена: 40 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs-menu__body">
+									<div class="tabs-menu__grid body-grid">
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Барбекю</div>
+											<div class="cell-items__image-ibg"><img src="@img/sauses/sauceBbq.svg" alt="BBQ sause"></div>
+											<div class="cell-items__price ">Цена: 15 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Грибной</div>
+											<div class="cell-items__image-ibg"><img src="@img/sauses/sauceMushroom.png" alt="mushroom sause"></div>
+											<div class="cell-items__price">Цена: 15 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Фирменный</div>
+											<div class="cell-items__image-ibg"><img src="@img/sauses/sauceSpecial.png" alt="special sause"></div>
+											<div class="cell-items__price">Цена: 20 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Сырный</div>
+											<div class="cell-items__image-ibg"><img src="@img/sauses/sauseCheese.png" alt="Cheesy sause"></div>
+											<div class="cell-items__price">Цена: 15 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Пармезановый</div>
+											<div class="cell-items__image-ibg"><img src="@img/sauses/sauceParmesan.png" alt="Parmesan sause"></div>
+											<div class="cell-items__price">Цена: 18 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+										<div class="body-grid__cell cell-items">
+											<div class="cell-items__label">Чесночный</div>
+											<div class="cell-items__image-ibg"><img src="@img/sauses/souceGarlic.png" alt="Garlic sause"></div>
+											<div class="cell-items__price">Цена: 15 грн</div>
+											<div class="cell-items__order">
+												<a href="#" class="cell-items__link btn">заказать</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="response" class="page__response response-page">
+					<div class="response-page__container">
+							<h2 class="response-page__label label">Отзывы</h2>
+							<!-- Оболочка слайдера -->
+							<div class="response-page__slider swiper">
+								<!-- Двигающееся часть слайдера -->
+								<div class="response-page__wrapper swiper-wrapper">
+									<!-- Слайд -->
+									<div class="response-page__slide swiper-slide">
+										<div class="response-page__box">
+											<div class="response-page__text">Скільки себе пам'ятаю, завше світили мені. Вікна в задумі розмаю, рушники на стіні. В тиші світлиці урочій
+												серцем читало дитя. Добрі Шевченкові очі золоте вишиття. 
+												Так от, бургери як варенички на маминій світлиці. Смакота і крапка.</div>
+											<div class="response-page__userName">Петро Щур</div>
+										</div>
+									</div>
+									<div class="response-page__slide swiper-slide">
+										<div class="response-page__box">
+											<div class="response-page__text">Вкусно и недорого!
+											</div>
+											<div class="response-page__userName">Иван Калымов</div>
+										</div>
+									</div>
+									<div class="response-page__slide swiper-slide">
+										<div class="response-page__box">
+											<div class="response-page__text">Оформил заказ, попросили подождать 20 минут. Через 20 минут приехал заказ. Не соврали -_-
+											</div>
+											<div class="response-page__userName">Николай Подозрев</div>
+										</div>
+									</div>
+									<div class="response-page__slide swiper-slide">
+										<div class="response-page__box">
+											<div class="response-page__text">Бургеры вообще тема. Буду только тут брать, все так вкусно приготовленно, будто мамой.ммммммм
+											</div>
+											<div class="response-page__userName">Илья Мармеладов</div>
+										</div>
+									</div>
+									<div class="response-page__slide swiper-slide">
+										<div class="response-page__box">
+											<div class="response-page__text"> Дуже смаколік. Sorry for my Ukrainian. Recently arrived from Australia, 
+												and decided to eat burgers, I thought I would go to McDonald's, but it is closed, 
+												it's good that my friends from Ukraine knew where to get burgers. 
+												I think the McDonald's burger sucks compared to this goodness!
+											</div>
+											<div class="response-page__userName">Gustav Meloni</div>
+										</div>
+									</div>
+								</div>
+								<!-- Если нужна пагинация -->
+								<div class="swiper-pagination"></div>
+							</div>
+							<button type="submit" class="response-page__button btn btn_grey">Добавить отзыв</button>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

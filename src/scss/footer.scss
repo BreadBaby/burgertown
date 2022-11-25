@@ -1,3 +1,65 @@
 //====================================================================================================
+.footer {
+    background-color: #FFCC3F;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        min-height: 100px;
+        font-weight: 400;
+        @include adaptiveValue("font-size", 20, 16);
+        line-height: math.div(27, 20 );
+    }
+
+    &__logo {
+        margin-right: 10px;
+        @media (max-width:$mobile){
+            display: none;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        margin-right: 10px;
+       @media (max-width:$mobile){
+         flex-direction: column;
+         gap: 10px 0; 
+       }
+    }
+
+    &__address {
+        margin-right: 10px;
+        span{
+            display: block;
+            font-weight: 600;
+        }
+    }
+
+    &__phone {
+        transition: color 0.3s ease 0s;
+        &:hover{
+            color: #ffffff;
+        }
+    }
+}
+.socials-footer {
+
+    &__social {
+        @media (min-width:$mobile){
+            &:not(:last-child) {
+                margin-right: 10px; 
+            }   
+        }
+        transition: color 0.3s ease 0s;
+        &::before{
+            @include adaptiveValue("font-size", 30, 20);
+            color: inherit;
+        }
+        &:hover{
+            color: #ffffff;
+        }
+    }
+}
 
 //====================================================================================================
