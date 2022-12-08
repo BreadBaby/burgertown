@@ -429,6 +429,41 @@ export function menuOpen() {
 export function menuClose() {
 	bodyUnlock();
 	document.documentElement.classList.remove("menu-open");
+	document.documentElement.classList.remove("cart-open");
+}
+
+export function orderInit() {
+	if (document.querySelector(".header__cart")) {
+		document.addEventListener("click", function (e) {
+			if (bodyLockStatus && e.target.closest('.header__cart')) {
+				bodyLockToggle();
+				document.documentElement.classList.toggle("cart-open");
+			}
+		});
+	};
+}
+export function orderOpen() {
+	bodyLock();
+	document.documentElement.classList.add("cart-open");
+}
+export function orderClose() {
+	bodyUnlock();
+	document.documentElement.classList.remove("cart-open");
+}
+
+export function addProductInit() {
+	if (document.querySelector(".box__link")) {
+		document.addEventListener("click", function (e) {
+			if (bodyLockStatus && e.target.closest('.box__link')) {
+				bodyLockToggle();
+				document.documentElement.classList.toggle("cart-open");
+			}
+		});
+	};
+}
+export function addProductClose() {
+	bodyUnlock();
+	document.documentElement.classList.remove("cart-open");
 }
 // Модуль "показать еще" =======================================================================================================================================================================================================================
 /*

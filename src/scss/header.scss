@@ -28,6 +28,7 @@
 		position: relative;
 	}
 	&__menu{
+		z-index: 2;
 		@media (max-width:$mobile){
 			position: absolute;
 		}
@@ -44,6 +45,7 @@
 		animation-name: spin;
 	}
 	&__cart {
+		z-index: 5;
 		font-size: rem(30);
 		position: relative;
 		@include adaptiveValue("margin-right", 15, 5);
@@ -60,6 +62,10 @@
 			color: #FFFFFF;
 			font-size: rem(12);
 			background-color: #FF1700;
+		}
+		transition: color 0.3s 0s;
+		&:hover{
+			color: #FFFFFF;
 		}
 	}
 
@@ -101,8 +107,8 @@
 			height: 100%;
 			overflow: auto;
 			top: 0;
-			left: -100%;
-			transition: left 0.3s ease 0s;
+			right: -100%;
+			transition: right 0.3s ease 0s;
 			background-color: #ffcc3ffa;
 			padding: 100px 15px 30px 15px;
 			&::before{
@@ -111,15 +117,15 @@
 				width: 100%;
 				height: 100px;
 				top: 0;
-				left: -100%;
-				transition: left 0.3s ease 0s;
+				right: -100%;
+				transition: right 0.3s ease 0s;
 				background-color: #FFCC3F;
 				z-index: 2;
 			}
 			.menu-open &{
-				left: 0;
+				right: 0;
 				&::before{
-					left: 0;
+					right: 0;
 				}
 			}
 		}
@@ -217,3 +223,256 @@
 /*
 
 */
+//====================================================================================================
+
+.header {
+
+	&__order {
+		//display: none;
+
+		
+	}
+}
+.order {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	top: 0;
+	left: -100%;
+	transition: left 0.3s ease 0s;
+	background-color: #fffffffa;
+	padding-top: 100px;
+	padding-bottom: 10px;
+	&::before{
+		content:'';
+		position: fixed;
+		width: 100%;
+		height: 100px;
+		top: 0;
+		left: -100%;
+		transition: left 0.3s ease 0s;
+		background-color: #FFCC3F;
+		z-index: 2;
+		}
+	.cart-open &{
+		left: 0;
+		&::before{
+			left: 0;
+		}
+	}
+	&__label {
+		margin-bottom: rem(20);
+	}
+
+	&__content {
+		display: flex;
+		gap: rem(30);
+		@media (max-width:$mobile){
+			flex-direction: column; 
+		}
+	}
+}
+.label {
+}
+.content-order {
+
+	&__box {
+		flex: 0 1 50%;
+	}
+
+	&__form {
+		flex: 0 1 50%;
+	}
+}
+.box {
+	display: flex;
+	flex-direction: column;
+	gap: 10px 0;
+	&__table {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__finalPrice {
+		align-self: end;
+	}
+
+	&__link {
+		align-self: end;
+		padding: rem(10) rem(20);
+		border: 1px solid #FFC600;
+		border-radius: 50px;
+		transition: all 0.3s ease 0s;
+		&:hover{
+			background-color: #FFC600;
+			color: #fff;
+		}
+	}
+}
+.table {
+
+	&__item {
+		display: grid;
+		align-items: center;
+	}
+}
+.item-table {
+	grid-template-columns: repeat(5, 1fr);
+	&:not(:last-child) {
+		margin-bottom: rem(10);	
+	}
+	&_static {
+		grid-template-columns: 3fr 1fr 1fr;
+	}
+
+	&__label {
+
+	}
+
+	&__close {
+	}
+
+	&__burger {
+		margin-right: rem(10);
+	}
+
+	&__image {
+		position: relative;
+        padding-bottom: percent(60, 64);
+		img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+	}
+
+	&__name {
+
+	}
+
+	&__quantity {
+
+	}
+
+	&__price {
+
+	}
+}
+.btn {
+}
+.form {
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 15px;
+		
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		&_alignStart{
+			align-items: start;
+			text-align: start;
+		}
+	}
+
+	&__input {
+		border-radius: 50px;
+		border: 2px solid #FFC600;
+		color: #5F5F5F;
+		width: 100%;
+		padding: rem(5) rem(15) rem(5) rem(15);
+	}
+
+	&__adress {
+		display: flex;
+		flex-direction: column;
+		gap: 10px 0;
+	}
+
+	&__house {
+		display: flex;
+		.form__input{
+			&:not(:last-child) {
+				margin-right: rem(10);	
+			}
+		}
+		.form__input{
+			@media (min-width:$mobile){
+				  padding-right: 2px;
+			}
+			@media (max-width:$mobile){
+				 font-size: rem(20);
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: rem(10);
+		@include adaptiveValue("font-size", 36, 40);
+    	line-height: math.div(42 , 36);
+	}
+
+	&__button {
+		padding: rem(10) rem(80);
+		align-self: start;
+
+		
+	}
+}
+textarea.form__input{
+	resize: vertical;
+}
+.select {
+	&__body{
+		border-radius: 50px;
+	}
+	
+}
+.options {
+
+	&__item {
+	}
+
+	&__input {
+		display: none;
+		&:checked + .options__label::after{
+			transform: scale(1);
+		}
+	}
+
+	&__label {
+		display: inline-flex;	
+		position: relative;
+		width: 100%;
+		cursor: pointer;
+		&::before{
+			content:'';
+			flex: 0 0 24px;
+			height: 24px;
+			border-radius: 50%;
+			border: 1px solid #FFC600;
+			align-self: flex-start;
+			margin-right: rem(10);
+		}
+		&::after{
+			content:'';
+			transition: transform 0.3s ease 0s;
+			position: absolute;
+			top: 4px;
+			left: 4px;
+			width: 16px;
+			height: 16px;
+			background-color: #FFC600;
+			border-radius: 50%;
+			transform: scale(0);
+		}
+	}
+}

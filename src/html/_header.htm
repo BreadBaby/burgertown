@@ -15,7 +15,82 @@
 				</nav>
 			</div>
 			<div class="header__menucart">
-				<a href="#" class="header__cart _icon-cart"><span>1</span></a>
+				<button type="button" class="header__cart _icon-cart"><span>1</span></button>
+				<div class="header__order order">
+					<div class="order__container">
+						<h2 class="order__label label">Корзина</h2>
+						<div class="order__content content-order">
+							<div class="content-order__box box">
+								<div class="box__table table">
+									<div class="table__item item-table item-table_static">
+										<div class="item-table__label">Товар</div>
+										<div class="item-table__label">Кол-во</div>
+										<div class="item-table__label">Цена</div>			
+									</div>
+									<div class="table__item item-table">
+										<button type="button" class="item-table__close">
+											<img src="@img/vectors/close.svg" alt="">
+										</button>
+										<div class="item-table__burger">
+											<div class="item-table__image">
+												<img src="@img/burgers/special.svg" alt="">
+											</div>
+										</div>
+										<div class="item-table__name">Spesial</div>
+										<div class="item-table__quantity">1</div>
+										<div class="item-table__price">140 грн</div>
+									</div>
+								</div>
+								<div class="box__finalPrice">Итог: 140 грн</div>
+								<a data-goto-header data-goto="#menu" href="#" class="box__link">Добавить</a>
+							</div>
+							<div class="content-order__form form">
+								<form action="#" class="form__body"> 
+									<div class="form__item">
+										<input type="text"  placeholder="Имя" name="name" class="form__input">
+									</div>
+									<div class="form__item">
+										<input type="text" placeholder="Телефон" name="number" class="form__input">
+									</div>
+									<div class="form__item">
+										<select name="delivery" id="" class="select">
+											<option value="courier" selected>Доставка курьером</option>
+											<option value="pickup">Самовывоз</option>
+										</select>
+									</div>
+									<div class="form__item">
+										<div class="form__adress">
+											<input type="text" placeholder="Улица" name="street" class="form__input">
+											<div class="form__house">
+												<input type="text" placeholder="Дом" name="numberHouse" class="form__input">
+												<input type="text" placeholder="Подъезд" name="numberFlat" class="form__input">
+												<input type="text" placeholder="Квартира" name="numberEntrance" class="form__input">
+											</div>
+										</div>
+									</div>
+									<div class="form__item">
+										<textarea placeholder="Коментарий к заказу" data-autoheight name="message" id="formMessage" class="form__input"></textarea>
+									</div>
+									<div class="form__item form__item_alignStart">
+										<h3 class="form__title">Способы оплаты</h3>
+										<div class="options">
+											<div class="options__item">
+												<input id="formCash" checked  type="radio" name="payment" value="cash" class="options__input">
+												<label for="formCash" class="options__label"><span>Наличными при получении</span></label>
+											</div>
+											<div class="options__item">
+												<input id="formTransferToCard" checked  type="radio" name="payment" value="transferToCard" class="options__input">
+												<label for="formTransferToCard" class="options__label"><span>Банковской картой(номер уточнит оператор)</span></label>
+											</div>
+										</div>
+									</div>
+									<button type="submit" class="form__button btn">Заказать</button>
+								</form>
+							</div>
+						</div>
+					</div>
+					
+				</div>
 			</div>
 			<div class="header__menulang">
 				<ul class="header__listlanguages">
