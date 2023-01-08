@@ -465,6 +465,7 @@ export function addProductClose() {
 	bodyUnlock();
 	document.documentElement.classList.remove("cart-open");
 }
+
 // Модуль "показать еще" =======================================================================================================================================================================================================================
 /*
 Документация по работе в шаблоне: https://template.fls.guru/template-docs/modul-pokazat-eshhjo.html

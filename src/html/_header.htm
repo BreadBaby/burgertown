@@ -3,7 +3,7 @@
 		<nav class="header__nav">
 			<div class="header__menulogo">
 				<img class="header-nav-column__logo" src="@img/logo.svg" alt="Burger Logo">
-				<a class="header-nav-column__logoText">burgertown</a>
+				<a href="#" class="header-nav-column__logoText">burgertown</a>
 			</div>
 			<div class="header__menu menu">
 				<nav class="menu__body">
@@ -15,10 +15,14 @@
 				</nav>
 			</div>
 			<div class="header__menucart">
-				<button type="button" class="header__cart _icon-cart"><span>1</span></button>
+				<button type="button" class="header__cart _icon-cart"></button>
 				<div class="header__order order">
 					<div class="order__container">
 						<h2 class="order__label label">Корзина</h2>
+						<div class="order__hidesElement">
+							<div class="order__hidesText">Ваша корзина пуста :(</div>
+							<a data-goto-header data-goto="#menu" href="#" class="box__link">Добавить</a>
+						</div>
 						<div class="order__content content-order">
 							<div class="content-order__box box">
 								<div class="box__table table">
@@ -27,21 +31,8 @@
 										<div class="item-table__label">Кол-во</div>
 										<div class="item-table__label">Цена</div>			
 									</div>
-									<div class="table__item item-table">
-										<button type="button" class="item-table__close">
-											<img src="@img/vectors/close.svg" alt="">
-										</button>
-										<div class="item-table__burger">
-											<div class="item-table__image">
-												<img src="@img/burgers/special.svg" alt="">
-											</div>
-										</div>
-										<div class="item-table__name">Spesial</div>
-										<div class="item-table__quantity">1</div>
-										<div class="item-table__price">140 грн</div>
-									</div>
 								</div>
-								<div class="box__finalPrice">Итог: 140 грн</div>
+								<div class="box__finalPrice">Итог: <span></span> грн</div>
 								<a data-goto-header data-goto="#menu" href="#" class="box__link">Добавить</a>
 							</div>
 							<div class="content-order__form form">
@@ -50,7 +41,7 @@
 										<input type="text"  placeholder="Имя" name="name" class="form__input">
 									</div>
 									<div class="form__item">
-										<input type="text" placeholder="Телефон" name="number" class="form__input">
+										<input type="tel" placeholder="Телефон" name="phone" class="form__input">
 									</div>
 									<div class="form__item">
 										<select name="delivery" id="" class="select">
@@ -80,11 +71,11 @@
 											</div>
 											<div class="options__item">
 												<input id="formTransferToCard" checked  type="radio" name="payment" value="transferToCard" class="options__input">
-												<label for="formTransferToCard" class="options__label"><span>Банковской картой(номер уточнит оператор)</span></label>
+												<label for="formTransferToCard" class="options__label "><span>Банковской картой(номер уточнит оператор)</span></label>
 											</div>
 										</div>
 									</div>
-									<button type="submit" class="form__button btn">Заказать</button>
+									<button type="submit" class="form__button btn">заказать</button>
 								</form>
 							</div>
 						</div>
@@ -94,9 +85,9 @@
 			</div>
 			<div class="header__menulang">
 				<ul class="header__listlanguages">
-					<li class="header__itemLanguages"><a href="#ua" data-reload class="header__linkLanguages _activeLang">UA</a></li>
-					<li class="header__itemLanguages"><a href="#ru" data-reload class="header__linkLanguages">RU</a></li>
-					<li class="header__itemLanguages"><a href="#eng" data-reload class="header__linkLanguages">ENG</a></li>
+					<li data-order="1" class="header__itemLanguages"><a href="#"  class="header__linkLanguages">RU</a></li>
+					<li data-order="2" class="header__itemLanguages"><a href="#"  class="header__linkLanguages">UA</a></li>
+					<li data-order="3" class="header__itemLanguages"><a href="#"  class="header__linkLanguages">ENG</a></li>
 				</ul>
 			</div>
 			<button type="button" class="icon-menu">

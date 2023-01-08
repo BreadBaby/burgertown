@@ -42,7 +42,6 @@
 	}
 	&__menulang{
 		z-index: 5;
-		animation-name: spin;
 	}
 	&__cart {
 		z-index: 5;
@@ -70,17 +69,21 @@
 	}
 
 	&__listlanguages {
+		display: flex;
+		flex-direction: column;
 		font-weight: 600;
 		@media (max-width:$mobile){
-			 font-size: 20px;
+			font-size: 20px;
 		}
 	}
 
 	&__itemLanguages {
+		
 	}
 
 	&__linkLanguages {
 		text-transform: uppercase;
+
 	}
 }
 .header-nav-column {
@@ -264,6 +267,19 @@
 	&__label {
 		margin-bottom: rem(20);
 	}
+	&__empty {
+
+	}
+	&__hidesElement{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		gap: 10px 0;
+		.box__link{
+			align-self: center;
+		}
+	}
 
 	&__content {
 		display: flex;
@@ -331,6 +347,10 @@
 	}
 
 	&__close {
+		cursor:default;
+		img{
+			cursor: pointer;
+		}
 	}
 
 	&__burger {
